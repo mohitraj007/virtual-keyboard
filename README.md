@@ -1,5 +1,16 @@
 # AngularKeyboard
 
+## Objective
+
+This project is a demonstration of a virtual keyboard with scrambling alphabets upon every albhabetical entry.
+
+## Demo
+
+This project is deployed as an app at [Angular Keyboard](https://angular-virtual-keyboard.herokuapp.com).
+For any feedback upon how to improve this idea further, please drop a comment.
+
+## CLI Version
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.7.
 
 ## Development server
