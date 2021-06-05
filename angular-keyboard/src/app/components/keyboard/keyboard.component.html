@@ -1,0 +1,70 @@
+<div id="container">
+    <ul id="keyboard">
+        <textarea id="write" rows="6" [(ngModel)]="input"></textarea>
+        <!--Row 1-->
+        <span class="row">
+            <!--symbol[0] on num row-->
+            <ng-container *ngFor="let key of symbols | slice:0:1">
+                <li class="symbol" (click)="keyClick(key)">{{!upperCase ? key.primary : key.secondary}}</li>
+            </ng-container>
+            <!--Numbers array on num row-->
+            <ng-container *ngFor="let key of numbers">
+                <li class="symbol" (click)="keyClick(key)">{{!upperCase ? key.primary : key.secondary}}</li>
+            </ng-container>
+            <!--symbol[2,3] on num row-->
+            <ng-container *ngFor="let key of symbols | slice:1:3">
+                <li class="symbol" (click)="keyClick(key)">{{!upperCase ? key.primary : key.secondary}}</li>
+            </ng-container>
+            <!--Delete key on num row-->
+            <li class="delete" (click)="backSpace()">BkSpc</li>
+        </span>
+        <span class="row">
+            <!--Row 2-->
+            <!--Tab key on alphabet row 1-->
+            <li class="tab" (click)="tab()">Tab</li>
+            <!--alphabets on alphabet row 1-->
+            <ng-container *ngFor="let key of alphabets | slice:0:10">
+                <li class="letter" (click)="keyClick(key)">{{!upperCase ? key : key | uppercase}}</li>
+            </ng-container>
+            <!--symbols on alphabet row 1-->
+            <ng-container *ngFor="let key of symbols | slice:3:6">
+                <li class="symbol" (click)="keyClick(key)">{{!upperCase ? key.primary : key.secondary}}</li>
+            </ng-container>
+        </span>
+        <span class="row">
+            <!--Row 3-->
+            <!--Caps Lock key on alphabet row 2-->
+            <li class="capslock" [ngClass]="{'active': capsLock}" (click)="toggleCapsLock()">Caps Lock</li>
+            <!--alphabets on alphabet row 2-->
+            <ng-container *ngFor="let key of alphabets | slice:10:19" style="width: 100%">
+                <li class="letter" (click)="keyClick(key)">{{!upperCase ? key : key | uppercase}}</li>
+            </ng-container>
+            <!--symbols on alphabet row 2-->
+            <ng-container *ngFor="let key of symbols | slice:6:8">
+                <li class="symbol" (click)="keyClick(key)">{{!upperCase ? key.primary : key.secondary}}</li>
+            </ng-container>
+            <!--Enter key on alphabet row 2-->
+            <li class="enter" (click)="enter()">Enter</li>
+        </span>
+        <span class="row">
+            <!--Row 4-->
+            <!--Shift key on alphabet row 3-->
+            <li class="left-shift" [ngClass]="{'active': shift}" (click)="toggleShift()">Shift</li>
+            <!--alphabets on alphabet row 3-->
+            <ng-container *ngFor="let key of alphabets | slice:19:26">
+                <li class="letter" (click)="keyClick(key)">{{!upperCase ? key : key | uppercase}}</li>
+            </ng-container>
+            <!--symbols on alphabet row 3-->
+            <ng-container *ngFor="let key of symbols | slice:8:11">
+                <li class="symbol" (click)="keyClick(key)">{{!upperCase ? key.primary : key.secondary}}</li>
+            </ng-container>
+            <!--Right shift key on alphabet row 3-->
+            <li class="right-shift" [ngClass]="{'active': shift}" (click)="toggleShift()">Shift</li>
+        </span>
+        <span class="row">
+            <!--Row 4-->
+            <!--Space key-->
+            <li class="space" (click)="space()">_______</li>
+        </span>
+    </ul>
+</div>

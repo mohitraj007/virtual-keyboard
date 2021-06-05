@@ -1,0 +1,34 @@
+{
+    "alphabets": [
+        "q", "w", "e", "r", "t", "y", "u", "i", "o", "p",
+        "a", "s", "d", "f", "g", "h", "j", "k", "l",
+        "z", "x", "c", "v", "b", "n", "m"
+    ],
+    "numbers": [
+        {"primary": "1", "secondary": "!"},
+        {"primary": "2", "secondary": "@"},
+        {"primary": "3", "secondary": "#"},
+        {"primary": "4", "secondary": "$"},
+        {"primary": "5", "secondary": "%"},
+        {"primary": "6", "secondary": "^"},
+        {"primary": "7", "secondary": "&"},
+        {"primary": "8", "secondary": "*"},
+        {"primary": "9", "secondary": "("},
+        {"primary": "0", "secondary": ")"}
+    ],
+    "symbols": [
+        {"primary": "`", "secondary": "~"},
+        
+        {"primary": "-", "secondary": "_"},
+        {"primary": "=", "secondary": "+"},
+
+        {"primary": "[", "secondary": "{"},
+        {"primary": "]", "secondary": "}"},
+        {"primary": "\\", "secondary": "|"},
+        {"primary": ";", "secondary": ":"},
+        {"primary": "'", "secondary": "\""},
+        {"primary": ",", "secondary": "<"},
+        {"primary": ".", "secondary": ">"},
+        {"primary": "/", "secondary": "?"}        
+    ]
+}
